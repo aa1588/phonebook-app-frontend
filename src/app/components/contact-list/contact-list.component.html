@@ -1,0 +1,26 @@
+
+<table class="table table-striped ms-5 mt-5 w-50">
+    <thead>
+      <tr>
+        <th scope="col">S.N</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{contact.contactId}}</td>
+        <td>{{contact.contactName}}</td>
+        <td>{{contact.contactEmail}}</td>
+        <td>{{contact.contactNum}}</td>
+        <td>
+         
+
+          <a class="me-3 text-success" (click)="updateContact(contact.contactId)"><i class="bi bi-pencil-square"></i></a>
+          <a  class="text-danger" (click)="deleteContact(contact.contactId)"><i class="bi bi-trash"></i></a>
+        </td>
+      <tr>
+    </tbody>
+</table>
